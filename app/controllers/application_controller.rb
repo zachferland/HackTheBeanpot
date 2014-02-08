@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   $global = "oh yes"
+  $tip = false;
 
   before_action :setup_bp
   def setup_bp

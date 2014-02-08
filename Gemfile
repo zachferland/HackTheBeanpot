@@ -14,9 +14,9 @@ gem 'rails_12factor', group: :production
 gem 'bitpay-client', :require => 'bitpay'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+# gem 'sqlite3'
 
-# gem "pg"
+gem "pg"
 
 gem 'figaro'
 

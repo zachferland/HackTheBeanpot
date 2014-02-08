@@ -4,9 +4,7 @@ WeeklybitCom::Application.routes.draw do
 
   # get "/status" => "pages#status"
 
-  get "/status" => "pages#status", :format => :json
-
-  post "/status" => "pages#status", :format => :json
+  get "/status" => "pages#status", :format => :text
 
   root "pages#index"
   # The priority is based upon order of creation: first created -> highest priority.

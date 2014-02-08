@@ -7,16 +7,16 @@ gem 'rails', '4.0.2'
 
 gem 'foundation-rails'
 
-gem 'mailchimp-api', require: 'mailchimp'
-
 gem 'thin'
 
 gem 'rails_12factor', group: :production
 
-# Use sqlite3 as the database for Active Record
- # gem 'sqlite3's
+gem 'bitpay-client', :require => 'bitpay'
 
-gem "pg"
+# Use sqlite3 as the database for Active Record
+gem 'sqlite3'
+
+# gem "pg"
 
 gem 'figaro'
 

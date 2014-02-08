@@ -27,6 +27,9 @@ GEM
       tzinfo (~> 0.3.37)
     arel (4.0.1)
     atomic (1.1.14)
+    bitpay-client (0.1.2)
+      json
+      rack
     builder (3.1.4)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
@@ -38,7 +41,6 @@ GEM
     daemons (1.1.9)
     erubis (2.7.0)
     eventmachine (1.0.3)
-    excon (0.31.0)
     execjs (2.0.2)
     figaro (0.7.0)
       bundler (~> 1.0)
@@ -58,13 +60,9 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
-    mailchimp-api (2.0.4)
-      excon (>= 0.16.0)
-      json (>= 1.7.7)
     mime-types (1.25.1)
     minitest (4.7.5)
     multi_json (1.8.4)
-    pg (0.17.1)
     polyglot (0.3.3)
     rack (1.5.2)
     rack-test (0.6.2)
@@ -107,6 +105,7 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (~> 2.8)
+    sqlite3 (1.3.8)
     thin (1.6.1)
       daemons (>= 1.0.9)
       eventmachine (>= 1.0.0)
@@ -129,17 +128,17 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bitpay-client
   coffee-rails (~> 4.0.0)
   figaro
   foundation-rails
   jbuilder (~> 1.2)
   jquery-rails
-  mailchimp-api
-  pg
   rails (= 4.0.2)
   rails_12factor
   sass-rails (~> 4.0.0)
   sdoc
+  sqlite3
   thin
   turbolinks
   uglifier (>= 1.3.0)

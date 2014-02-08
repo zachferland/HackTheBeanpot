@@ -1,28 +1,65 @@
+require 'bitpay'
+
 class PagesController < ApplicationController
-  def index
-    @member_count = @mc.lists.list({'list_id' => '5179b9cf9c'})['data'][0]['stats']['member_count'] + 83
-     # = lists_res['data'][15].member_count
+
+  before_filter :init
+  def init
+    @brew = false;
   end
 
-  def subscribe
-  	email = params['email']
-    begin
-      @mc.lists.subscribe('5179b9cf9c', {'email' => email})
-      flash[:success] = "Thanks, #{email} subscribed successfully! Emails will be delivered every Wednesday, enjoy!"
-    rescue Mailchimp::ListAlreadySubscribedError
-      flash[:error] = "#{email} is already subscribed to the list."
-    rescue Mailchimp::ListDoesNotExistError
-      flash[:error] = "The list could not be found."
-      redirect_to root_path
-      return
-    rescue Mailchimp::Error => ex
-      if ex.message
-        flash[:error] = ex.message
-      else
-        flash[:error] = "An unknown error occurred"
-      end
-    end
-    redirect_to root_path
+
+
+  def index
+
   end
+
+  def coffee
+
+    # create invoice here and get the url to embed 
+    # client = BitPay::Client.new 'hzy3m1YGPruUtvQoSoj9waSQQqvZOsESUdAjZ4VrrY'
+
+    # need https url to give a return request
+    @invoice = @bp.post 'invoice', {:price => 1.00, :currency => 'USD', :transactionSpeed => "high", :notificationURL => "https://localhost:3000/confirm", :fullNotifications => true}
+
+    # append &view=iframe
+    @invoice_url = @invoice["url"] + "&view=iframe"
+
+    invoice_id = @invoice["id"];
+
+    @status_url = "http://localhost:3000/status"
+
+    $global = invoice_id
+
+  end
+
+  def pay
+    # embebed form in this page, check for request back to page that transaction has completed, once it has, send request to arduino
+    # and who message ready to brew, add cup, design it all nice and shit
+    
+  end
+
+  def status
+    # checks for payment here and then sends reuest (true) to arduino
+    status = @bp.get 'invoice/' + $global
+
+    if (status["status"] == "paid")
+      render :text=> "1"
+    else 
+      render :text=> "0"
+    end 
+  end
+
+  def machine_endpoint
+    # sets a value here for the mahcine to be able to check if a payment was accepted to make coffee
+    # sends here if tip seletect or payment confiremd
+    # so maybe just set once the you are ready to brew page comes up
+
+    # machine makes requests here, and then returns brew to machine
+  end
+
+  # only start polling once an invoice is create
 
 end
+
+
+# should I make a invoice on the coffee page, and then link the button to the url or should I put it on the next page, gets it and shows it (latter)

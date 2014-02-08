@@ -1,6 +1,10 @@
 WeeklybitCom::Application.routes.draw do
 
-  post "/subscribe" => "pages#subscribe"
+  get "/welcome" => "pages#coffee"
+
+  # get "/status" => "pages#status"
+
+  get "/status" => "pages#status", :format => :text
 
   root "pages#index"
   # The priority is based upon order of creation: first created -> highest priority.

@@ -23,7 +23,7 @@ class PagesController < ApplicationController
 
 
   def coffee
-
+    @tip = Store.first.coffee
 
   end
 

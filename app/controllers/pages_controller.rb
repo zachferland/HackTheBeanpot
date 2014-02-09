@@ -50,11 +50,11 @@ class PagesController < ApplicationController
     status = @bp.get 'invoice/' + $global
 
     if ((status["status"] == "paid") or $tip)
-      render :text=> "{1}"
+      render :text=> "{0}"
       # render :json=> {:brew => 1}
       $tip = false;
     else 
-      render :text=> "{0}"
+      render :text=> "{1}"
       # render :json=> {:brew => 0}
     end 
   end

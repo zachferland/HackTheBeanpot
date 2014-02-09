@@ -47,9 +47,10 @@ class PagesController < ApplicationController
 
   def status
     # checks for payment here and then sends reuest (true) to arduino
-    status = @bp.get 'invoice/' + $global
+    # status = @bp.get 'invoice/' + $global
 
-    if ((status["status"] == "paid") or $tip)
+    # if ((status["status"] == "paid") or $tip)
+    if (false)
       render :text=> "{0}"
       # render :json=> {:brew => 1}
       $tip = false;

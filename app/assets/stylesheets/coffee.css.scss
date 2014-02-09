@@ -1,5 +1,128 @@
+.main {
+	height: 900px;
+	background: image-url("bg.png") no-repeat center center fixed; 
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+  	font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  	-webkit-font-smoothing: antialiased;
+}
+
+.button-m {
+	background-color: #f76e3c;
+	height: 45px;
+	cursor: pointer;
+	width: auto;
+}
+
+.pwb {
+		float: left;
+		margin-left: 45px;
+
+		.price {
+			background-color: #e86332;
+			height: 100%;
+			width: 67px;
+			display: block;
+			float: left;
+			-webkit-font-smoothing: antialiased;
+			text-transform: uppercase;
+			color: #fff;
+			font-weight: 700;
+			font-size: 14px;
+			padding: 14px 10px;
+		}
+
+		.text {
+			height: 100%;
+			width: auto;
+			float: left;
+			margin: 14px 26px;
+			text-transform: uppercase;
+			color: #fff;
+			font-weight: 500;
+			// -webkit-font-smoothing: antialiased;
+			font-size: 16px;
+		}
+	}
+
+	.fc {
+		float: right;
+		margin-right: 45px;
+
+		.price {
+			background-color: #e86332;
+			height: 100%;
+			width: 70px;
+			display: block;
+			float: right;
+			-webkit-font-smoothing: antialiased;
+			text-transform: uppercase;
+			color: #fff;
+			font-weight: 700;
+			font-size: 14px;
+
+			.free {
+				float: left;
+				padding: 15px 10px 0 12px;
+			}
+
+			.cup {
+				background: image-url("cup.png"); 
+				width: 18px;
+				height: 24px;
+				float: left;
+				margin: 10px 0px;
+			}
+		}
+
+		.text {
+			height: 100%;
+			width: auto;
+			float: right;
+			margin: 14px 26px;
+			text-transform: uppercase;
+			color: #fff;
+			font-weight: 500;
+			font-size: 16px;
+		}
+	}
+
+
+.title-sub {
+	color: #fff;
+	text-align: center;
+	margin-top: 120px;
+	font-size: 28px;
+	margin-bottom: 25px;
+	font-family: "Marck Script", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+	font-weight: 100;
+	letter-spacing: 1px;
+	-webkit-font-smoothing: antialiased;
+
+
+}
+
+.title {
+	color: #fff;
+	text-align: center;
+	font-size: 53px;
+	text-transform: uppercase;
+	font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+	font-weight: 700;
+	-webkit-font-smoothing: antialiased;
+}	
+
+.action {
+	margin-top: 70px;
+}
+
 iframe {
-	height: 170px;
-	width: 520px;
+	height: 190px;
+	width: 540px;
+	padding: 16px 20px;
 	border: none;
+	background-color: #fff;
+	margin-top: 150px;
 }

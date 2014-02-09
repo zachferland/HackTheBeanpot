@@ -13,7 +13,20 @@ class PagesController < ApplicationController
 
   end
 
+
+  def welcome
+
+  end
+
+
   def coffee
+
+
+  end
+
+  def pay
+    # embebed form in this page, check for request back to page that transaction has completed, once it has, send request to arduino
+    # and who message ready to brew, add cup, design it all nice and shit
 
     # create invoice here and get the url to embed 
     # client = BitPay::Client.new 'hzy3m1YGPruUtvQoSoj9waSQQqvZOsESUdAjZ4VrrY'
@@ -29,12 +42,6 @@ class PagesController < ApplicationController
     @status_url = "http://localhost:3000/status"
 
     $global = invoice_id
-
-  end
-
-  def pay
-    # embebed form in this page, check for request back to page that transaction has completed, once it has, send request to arduino
-    # and who message ready to brew, add cup, design it all nice and shit
     
   end
 

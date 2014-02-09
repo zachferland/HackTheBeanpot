@@ -2,6 +2,8 @@ WeeklybitCom::Application.routes.draw do
 
   get "/welcome" => "pages#coffee"
 
+  get "/pay" => "pages#pay"
+
   # get "/status" => "pages#status"
 
   get "/status" => "pages#status", :format => :text

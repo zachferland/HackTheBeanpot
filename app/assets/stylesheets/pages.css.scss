@@ -4,4 +4,128 @@
 	height: 14px;
 }
 
+.top {
+	height: 1000px;
+	background: image-url("bg.png") no-repeat center center fixed; 
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+  	font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  	-webkit-font-smoothing: antialiased;
+
+	p {
+		color: #fff;
+		margin-top: 60px;
+		text-align: center;
+		font-size: 17px;
+	}
+
+	.name {
+	color: #fff;
+	text-align: center;
+	font-size: 60px;
+	text-transform: uppercase;
+	font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+	font-weight: 700;
+	-webkit-font-smoothing: antialiased;
+}	
+
+	.donate {
+		height: auto;
+		padding-bottom: 25px;
+		width: 406px;
+		background-color: #fff;
+		margin: 80px auto 120px auto;
+
+		.current-price {
+			text-align: center;
+			padding-top: 70px;
+		}
+
+		img {
+			margin: 30px 100px 0 100px;
+			width: 200px;
+			height: 200px;
+		}
+
+		.wallet {
+			text-align: center;
+			margin-top: 20px;
+		}
+	}
+
+	.dc {
+		float: right;
+
+		.price {
+			background-color: #e86332;
+			height: 100%;
+			width: 70px;
+			display: block;
+			float: right;
+			-webkit-font-smoothing: antialiased;
+			text-transform: uppercase;
+			color: #fff;
+			font-weight: 700;
+			font-size: 14px;
+
+			.free {
+				float: left;
+				padding: 15px 10px 0 12px;
+			}
+
+			.cup {
+				background: image-url("cup.png"); 
+				width: 18px;
+				height: 24px;
+				float: left;
+				margin: 10px 0px;
+			}
+		}
+
+		.text {
+			height: 100%;
+			width: auto;
+			float: right;
+			margin: 14px 30px;
+			text-transform: uppercase;
+			color: #fff;
+			font-weight: 500;
+			font-size: 16px;
+		}
+	}
+}
+
+.how {
+	height: auto;
+	background-color: #f7fafc;
+	color: #4a4a4a;
+
+	img {
+		margin-top: 50px;
+		margin-bottom: 50px;
+	}
+
+	h2 {
+		text-align: center;
+		width: 860px;
+		font-weight: 300;
+		margin: 120px auto 0 auto;
+
+		font-size: 42px;
+		padding-bottom: 26px;
+		border-bottom: 1px solid lighten(#4a4a4a, 45%);
+	}
+
+	p {
+		color: #4a4a4a;
+		text-align: left;
+		font-size: 19px;
+		line-height: 33px;
+		-webkit-font-smoothing: antialiased;
+		tab-size: 20px;
+	}
+}
+
 

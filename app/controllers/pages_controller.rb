@@ -32,7 +32,7 @@ class PagesController < ApplicationController
     # client = BitPay::Client.new 'hzy3m1YGPruUtvQoSoj9waSQQqvZOsESUdAjZ4VrrY'
 
     # need https url to give a return request
-    @invoice = @bp.post 'invoice', {:price => 1.00, :currency => 'USD', :transactionSpeed => "high", :notificationURL => "https://localhost:3000/confirm", :fullNotifications => true}
+    @invoice = @bp.post 'invoice', {:price => 0.10, :currency => 'USD', :transactionSpeed => "high", :notificationURL => "https://localhost:3000/confirm", :fullNotifications => true}
 
     # append &view=iframe
     @invoice_url = @invoice["url"] + "&view=iframe"
@@ -47,15 +47,14 @@ class PagesController < ApplicationController
 
   def status
     # checks for payment here and then sends reuest (true) to arduino
-    # status = @bp.get 'invoice/' + $global
+    status = @bp.get 'invoice/' + $global
 
-    # if ((status["status"] == "paid") or $tip)
-    if (false)
-      render :text=> "{0}"
+    if ((status["status"] == "confirmed") or $tip)
+      render :text=> "{1}"
       # render :json=> {:brew => 1}
       $tip = false;
     else 
-      render :text=> "{1}"
+      render :text=> "{0}"
       # render :json=> {:brew => 0}
     end 
   end

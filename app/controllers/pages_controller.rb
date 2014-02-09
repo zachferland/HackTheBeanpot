@@ -32,7 +32,7 @@ class PagesController < ApplicationController
     # client = BitPay::Client.new 'hzy3m1YGPruUtvQoSoj9waSQQqvZOsESUdAjZ4VrrY'
 
     # need https url to give a return request
-    @invoice = @bp.post 'invoice', {:price => 0.10, :currency => 'USD', :transactionSpeed => "high", :notificationURL => "https://localhost:3000/confirm", :fullNotifications => true}
+    @invoice = @bp.post 'invoice', {:price => 0.20, :currency => 'USD', :transactionSpeed => "high", :notificationURL => "https://localhost:3000/confirm", :fullNotifications => true}
 
     # append &view=iframe
     @invoice_url = @invoice["url"] + "&view=iframe"

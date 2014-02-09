@@ -48,7 +48,7 @@ class PagesController < ApplicationController
   end
 
   def status
-    if ($notrecieved) {
+    if ($notrecieved) 
     # checks for payment here and then sends reuest (true) to arduino
     status = @bp.get 'invoice/' + $global
 
@@ -61,7 +61,7 @@ class PagesController < ApplicationController
       render :text=> "{0}"
       # render :json=> {:brew => 0}
     end 
-    }
+    end
   end
 
   def machine_endpoint

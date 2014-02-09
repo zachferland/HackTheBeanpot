@@ -42,10 +42,13 @@ class PagesController < ApplicationController
     @status_url = "http://localhost:3000/status"
 
     $global = invoice_id
+
+    $notrecieved = true;
     
   end
 
   def status
+    if ($notrecieved) {
     # checks for payment here and then sends reuest (true) to arduino
     status = @bp.get 'invoice/' + $global
 
@@ -53,10 +56,12 @@ class PagesController < ApplicationController
       render :text=> "{1}"
       # render :json=> {:brew => 1}
       $tip = false;
+      $notrecieved = false;
     else 
       render :text=> "{0}"
       # render :json=> {:brew => 0}
     end 
+    }
   end
 
   def machine_endpoint

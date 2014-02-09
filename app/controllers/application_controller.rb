@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
 
   $global = "oh yes"
   $tip = false;
+  $notrecieved = false;
 
   before_action :setup_bp
   def setup_bp

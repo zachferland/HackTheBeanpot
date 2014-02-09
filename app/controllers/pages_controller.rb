@@ -1,5 +1,7 @@
 require 'bitpay'
 
+require 'faraday'
+
 class PagesController < ApplicationController
 
   before_filter :init
@@ -10,11 +12,12 @@ class PagesController < ApplicationController
 
 
   def index
-
+    @tip = Store.first.coffee
   end
 
 
   def welcome
+
 
   end
 

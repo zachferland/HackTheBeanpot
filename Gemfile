@@ -9,6 +9,8 @@ gem 'foundation-rails'
 
 gem 'thin'
 
+gem 'faraday'
+
 gem 'rails_12factor', group: :production
 
 gem 'bitpay-client', :require => 'bitpay'

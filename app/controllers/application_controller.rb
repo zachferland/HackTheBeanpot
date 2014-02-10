@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
 
   before_action :setup_bp
   def setup_bp
-   @bp = BitPay::Client.new 'hzy3m1YGPruUtvQoSoj9waSQQqvZOsESUdAjZ4VrrY'
+   @bp = BitPay::Client.new 'API KEY GOES HERE'
   end
 
 

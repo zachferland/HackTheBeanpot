@@ -18,6 +18,7 @@
 
 }
 
+
 .top {
 	height: 1000px;
 	background: #465861 image-url("bg.png") no-repeat center center fixed; 
@@ -27,6 +28,14 @@
   	background-size: cover;
   	font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   	-webkit-font-smoothing: antialiased;
+
+
+	.newsletter {
+		margin-top: 20px;
+		margin-left: 20px;
+		float: left;
+
+	}	
 
   	a {
   			color: #87e1fe;
